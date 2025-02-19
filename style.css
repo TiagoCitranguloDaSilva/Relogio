@@ -1,0 +1,51 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100svh;
+  background-color: rgb(34, 34, 62);
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+#relogio{
+  background-color: white;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  font-size: 2rem;
+  position: relative;
+  border: 5px solid black;
+}
+
+.ponteiro{
+  background-color: black;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  transform-origin: 0% 100%;
+}
+
+#ponteiroHora{
+  width: .2em;
+  height: 1.3em;
+}
+#ponteiroMinuto{
+  width: .2em;
+  height: 1.8em;
+}
+#ponteiroSegundo{
+  width: .1em;
+  height: 1.9em;
+}
