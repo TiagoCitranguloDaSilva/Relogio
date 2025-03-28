@@ -16,29 +16,15 @@ var segundos = data.getSeconds()
 
 
 var rotacaoSegundo = segundos
-var rotacaoMinuto = minutos * 6// + segundos * 0.5
-var rotacaoHora = hora * 30//+ minutos * 6 + segundos * (1 / 120)
-ponteiroSegundo.style.rotate = `${rotacaoSegundo}deg`
-ponteiroMinuto.style.rotate = `${rotacaoMinuto}deg`
-ponteiroHora.style.rotate = `${rotacaoHora}deg`
-
+var rotacaoMinuto = minutos * 6 + segundos * 0.5
+var rotacaoHora = hora * 30 + minutos * 6 + segundos * (1 / 120)
 setInterval(() => {
   rotacaoSegundo+= 6
   ponteiroSegundo.style.rotate = `${rotacaoSegundo}deg`
-  
-}, 1000)
-
-setInterval(() => {
-  rotacaoMinuto += 6
+  rotacaoMinuto += 0.1
   ponteiroMinuto.style.rotate = `${rotacaoMinuto}deg`
-  
-}, 60000);
-
-setInterval(() => {
-  rotacaoHora += 30
+  rotacaoHora += 0.00833
   ponteiroHora.style.rotate = `${rotacaoHora}deg`
-}, 3600000)
-
-console.log(data)
+}, 1000)
 
 
